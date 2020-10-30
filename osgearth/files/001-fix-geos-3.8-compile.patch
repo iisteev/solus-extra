@@ -1,0 +1,52 @@
+From 1e2884748d98aaa168184fd69c4303a2d0aafad5 Mon Sep 17 00:00:00 2001
+From: Remo E <remo.eichenberger@gmail.com>
+Date: Sun, 19 Apr 2020 12:53:29 +0200
+Subject: [PATCH] GEOS 3.8 compile fix
+
+fix: https://github.com/gwaldron/osgearth/issues/1455
+---
+ src/osgEarth/GEOS.cpp | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+diff --git a/src/osgEarth/GEOS.cpp b/src/osgEarth/GEOS.cpp
+index 07da3fdf4e..31f97ab45a 100644
+--- a/src/osgEarth/GEOS.cpp
++++ b/src/osgEarth/GEOS.cpp
+@@ -63,9 +63,13 @@ namespace
+         {
+             coords->push_back( coords->front() );
+         }
++#if GEOS_VERSION_AT_LEAST(3,8)
++        geom::CoordinateSequence::Ptr seq = factory->create(coords);
++        return seq.get();
++#else
+         geom::CoordinateSequence* seq = factory->create( coords );
+-
+         return seq;
++#endif
+     }
+ 
+     geom::Geometry*
+@@ -141,12 +145,20 @@ namespace
+                     if ( shell )
+                     {
+                         const Polygon* poly = static_cast<const Polygon*>(input);
++#if GEOS_VERSION_AT_LEAST(3,8)
++                        std::vector<geom::LinearRing*>* holes = poly->getHoles().size() > 0 ? new std::vector<geom::LinearRing*>() : 0L;
++#else
+                         std::vector<geom::Geometry*>* holes = poly->getHoles().size() > 0 ? new std::vector<geom::Geometry*>() : 0L;
++#endif
+                         if (holes)
+                         {
+                             for( RingCollection::const_iterator r = poly->getHoles().begin(); r != poly->getHoles().end(); ++r )
+                             {
+-                                geom::Geometry* hole = import( r->get(), f );
++#if GEOS_VERSION_AT_LEAST(3,8)
++                                geom::LinearRing* hole = dynamic_cast<geom::LinearRing*>(import( r->get(), f ));
++#else
++                                geom::Geometry* hole = import(r->get(), f);
++#endif
+                                 if (hole)
+                                 {
+                                     if (hole->getGeometryTypeId() == geos::geom::GEOS_LINEARRING)
+

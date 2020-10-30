@@ -1,0 +1,25 @@
+name       : osgearth-2
+version    : 2.10.2
+release    : 1
+source     :
+    - https://github.com/gwaldron/osgearth/archive/osgearth-2.10.2.tar.gz : c702b5f0d1da3613c34fab839f8c55803734951813c1082e726bfe00f10e8aba
+homepage   : http://osgearth.org
+license    : GPL-2.0-or-later
+component  : programming.library
+summary    : Geospatial SDK for OpenSceneGraph
+description: |
+    osgEarth is a C++ geospatial SDK and terrain engine. Just create a simple XML file, point it at your map data, and go! osgEarth supports all kinds of data and comes with lots of examples    to help you get up and running quickly and easily.
+builddeps  : 
+    - pkgconfig(openscenegraph)
+    - pkgconfig(libcurl)
+    - pkgconfig(glu)
+    - pkgconfig(sqlite3)
+    - pkgconfig(protobuf)
+    - gdal-2-devel
+setup      : |
+    %patch -p1 < $pkgfiles/0001-Fix-3.8-compile.patch
+    %cmake_ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_OSGEARTH_EXAMPLES=OFF
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

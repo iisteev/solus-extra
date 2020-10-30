@@ -1,0 +1,56 @@
+From ade018be35c33d73cc1360ca67bfe044880fe347 Mon Sep 17 00:00:00 2001
+From: Isteevan Shetoo <isteevan.shetoo@is-info.fr>
+Date: Fri, 30 Oct 2020 13:25:18 +0100
+Subject: [PATCH] Fix 3.8 compile
+
+---
+ src/osgEarthSymbology/GEOS.cpp | 22 +++++++++++++++++-----
+ 1 file changed, 17 insertions(+), 5 deletions(-)
+
+diff --git a/src/osgEarthSymbology/GEOS.cpp b/src/osgEarthSymbology/GEOS.cpp
+index 78877597c..d26b783d6 100644
+--- a/src/osgEarthSymbology/GEOS.cpp
++++ b/src/osgEarthSymbology/GEOS.cpp
+@@ -64,9 +64,13 @@ namespace
+         {
+             coords->push_back( coords->front() );
+         }
+-        geom::CoordinateSequence* seq = factory->create( coords );
+-
+-        return seq;
++        #if GEOS_VERSION_AT_LEAST(3,8)
++            geom::CoordinateSequence::Ptr seq = factory->create(coords);
++            return seq.get();
++        #else
++            geom::CoordinateSequence* seq = factory->create( coords );
++            return seq;
++        #endif
+     }
+ 
+     geom::Geometry*
+@@ -141,12 +145,20 @@ namespace
+                     if ( shell )
+                     {
+                         const Symbology::Polygon* poly = static_cast<const Symbology::Polygon*>(input);
+-                        std::vector<geom::Geometry*>* holes = poly->getHoles().size() > 0 ? new std::vector<geom::Geometry*>() : 0L;
++                        #if GEOS_VERSION_AT_LEAST(3,8)
++                            std::vector<geom::LinearRing*>* holes = poly->getHoles().size() > 0 ? new std::vector<geom::LinearRing*>() : 0L;
++                        #else
++                            std::vector<geom::Geometry*>* holes = poly->getHoles().size() > 0 ? new std::vector<geom::Geometry*>() : 0L;
++                        #endif
+                         if (holes)
+                         {
+                             for( Symbology::RingCollection::const_iterator r = poly->getHoles().begin(); r != poly->getHoles().end(); ++r )
+                             {
+-                                geom::Geometry* hole = import( r->get(), f );
++                                #if GEOS_VERSION_AT_LEAST(3,8)
++                                    geom::LinearRing* hole = dynamic_cast<geom::LinearRing*>(import( r->get(), f ));
++                                #else
++                                    geom::Geometry* hole = import(r->get(), f);
++                                #endif
+                                 if ( hole ) holes->push_back( hole );
+                             }
+                             if (holes->size() == 0)
+-- 
+2.29.0
+
