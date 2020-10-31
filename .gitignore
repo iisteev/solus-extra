@@ -1,1 +1,4 @@
 *.eopkg
+*.xml
+*.xz
+*.sha1sum

@@ -18,7 +18,7 @@ builddeps  :
     - gdal-2-devel
 setup      : |
     # Until osgearth 3.1 is released
-    %patch -p1 < $pkgfiles/001-fix-geos-3.8-compile.patch
+    %patch -p1 < $pkgfiles/0001-fix-geos-3.8-compile.patch
     %cmake_ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_OSGEARTH_EXAMPLES=OFF
 build      : |
     %ninja_build
