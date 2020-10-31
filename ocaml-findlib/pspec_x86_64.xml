@@ -1,0 +1,70 @@
+<PISI>
+    <Source>
+        <Name>ocaml-findlib</Name>
+        <Packager>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming</PartOf>
+        <Summary xml:lang="en">Findlib is a library manager for Objective Caml.</Summary>
+        <Description xml:lang="en">It provides a convention how to store libraries, and a file format (&quot;META&quot;) 
+to describe the properties of libraries. There is also a tool (ocamlfind) 
+for interpreting the META files, so that it is very easy to use libraries in programs and scripts. 
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>ocaml-findlib</Name>
+        <Summary xml:lang="en">Findlib is a library manager for Objective Caml.</Summary>
+        <Description xml:lang="en">It provides a convention how to store libraries, and a file format (&quot;META&quot;) 
+to describe the properties of libraries. There is also a tool (ocamlfind) 
+for interpreting the META files, so that it is very easy to use libraries in programs and scripts. 
+</Description>
+        <PartOf>programming</PartOf>
+        <Files>
+            <Path fileType="config">/etc/findlib.conf</Path>
+            <Path fileType="executable">/usr/bin/ocamlfind</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/bigarray/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/bytes/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/compiler-libs/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/dynlink/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/Makefile.config</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/findlib.cma</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/findlib.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/findlib.mli</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/findlib_dynload.cma</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/findlib_top.cma</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/fl_dynload.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/fl_dynload.mli</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/fl_metascanner.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/fl_metascanner.mli</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/fl_metatoken.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/fl_package_base.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/fl_package_base.mli</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/topfind.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/findlib/topfind.mli</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/ocamlbuild/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/ocamldoc/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/raw_spacetime/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/stdlib/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/str/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/threads/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/unix/META</Path>
+            <Path fileType="man">/usr/share/man/man1/ocamlfind.1</Path>
+            <Path fileType="man">/usr/share/man/man5/META.5</Path>
+            <Path fileType="man">/usr/share/man/man5/findlib.conf.5</Path>
+            <Path fileType="man">/usr/share/man/man5/site-lib.5</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-10-31</Date>
+            <Version>1.8.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Update>
+    </History>
+</PISI>

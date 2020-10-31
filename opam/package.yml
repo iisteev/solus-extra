@@ -1,0 +1,21 @@
+name       : opam
+version    : 2.0.7
+release    : 1
+source     :
+    - https://github.com/ocaml/opam/archive/2.0.7.tar.gz : 42f18f3287cd61fdc40dba952f362f2193bd1328de75f688461d5a581c626595
+license    : LGPL-2.1-or-later
+component  : programming
+summary    : Opam is a source-based package manager for OCaml.
+networking : yes
+description: |
+     Opam supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow.
+builddeps  :
+    - ocamlbuild
+    - ocaml-findlib
+setup      : |
+    %configure
+build      : |
+    make lib-ext
+    make
+install    : |
+    %make_install

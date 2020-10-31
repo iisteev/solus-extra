@@ -1,0 +1,33 @@
+name       : ocaml-findlib
+version    : 1.8.1
+release    : 1
+source     :
+    - http://download.camlcity.org/download/findlib-1.8.1.tar.gz : 8e85cfa57e8745715432df3116697c8f41cb24b5ec16d1d5acd25e0196d34303
+license    : MIT
+component  : programming
+summary    : Findlib is a library manager for Objective Caml.
+description: |
+   It provides a convention how to store libraries, and a file format ("META") 
+   to describe the properties of libraries. There is also a tool (ocamlfind) 
+   for interpreting the META files, so that it is very easy to use libraries in programs and scripts. 
+builddeps  :
+   - ocamlbuild
+strip      : false
+setup      : |
+    ./configure \
+       -bindir $installdir/usr/bin \
+       -config $installdir/etc/findlib.conf \
+       -sitelib $installdir/usr/lib64/ocaml/site-lib \
+       -mandir $installdir/usr/share/man \
+       -with-toolbox \
+       -no-camlp4 \
+       -no-topfind
+build      : |
+   %make
+install    : |
+    echo OCAMLFIND_CONF_OVERRIDE=/etc/findlib.conf >> Makefile.config
+    %patch -p1 < $pkgfiles/001-correct-conf-path.patch
+    %make_install
+    sed -r -i 's/destdir=.*/destdir=\"\/usr\/lib64\/ocaml\/site\-lib\"/' $installdir/etc/findlib.conf
+    sed -r -i 's/path=.*/path=\"\/usr\/lib64\/ocaml\/site\-lib\"/' $installdir/etc/findlib.conf
+    rm -rf  $installdir/usr/share/man/man3
