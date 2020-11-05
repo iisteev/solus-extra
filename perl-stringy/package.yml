@@ -1,0 +1,19 @@
+name       : perl-stringy
+version    : 2.113
+release    : 1
+source     :
+    - https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/IO-Stringy-2.113.tar.gz : 51220fcaf9f66a639b69d251d7b0757bf4202f4f9debd45bdd341a6aca62fe4e
+license    : GPL-1.0-only
+component  : programming.perl
+summary    : IO-stringy - I/O on in-core objects like strings and arrays
+description: |
+    This toolkit primarily provides modules for performing both traditional and object-oriented i/o) on things other than normal filehandles; in particular, IO::Scalar, IO::ScalarArray, and IO::Lines.
+builddeps  :
+    - perl-module-build
+setup      : |
+    %perl_setup
+build      : |
+    %perl_build
+install    : |
+    %perl_install
+
