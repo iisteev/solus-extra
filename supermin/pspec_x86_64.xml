@@ -1,0 +1,35 @@
+<PISI>
+    <Source>
+        <Name>supermin</Name>
+        <Packager>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>PLEASE FILL ME IN</PartOf>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>supermin</Name>
+        <Summary xml:lang="en">PLEASE FILL ME IN</Summary>
+        <Description xml:lang="en">PLEASE FILL ME IN
+</Description>
+        <PartOf>PLEASE FILL ME IN</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/supermin</Path>
+            <Path fileType="man">/usr/share/man/man1/supermin.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-10-27</Date>
+            <Version>5.2.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Update>
+    </History>
+</PISI>

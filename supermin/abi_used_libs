@@ -1,0 +1,5 @@
+libc.so.6
+libcom_err.so.2
+libdl.so.2
+libext2fs.so.2
+libm.so.6

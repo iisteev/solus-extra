@@ -1,0 +1,18 @@
+name       : augeas
+version    : 1.12.0
+release    : 1
+source     :
+    - http://download.augeas.net/augeas-1.12.0.tar.gz : 321942c9cc32185e2e9cb72d0a70eea106635b50269075aca6714e3ec282cb87
+license    : LGPLv2+
+component  : system.devel
+summary    : command line tool that focuses on the most basic problem in handling Linux configurations programmatically.
+description: |
+    Augeas is a library and command line tool that focuses on the most basic problem in handling Linux configurations programmatically. editing actual configuration files in a controlled manner.
+builddeps  :
+    - pkgconfig(libxml-2.0)
+setup      : |
+    %configure 
+build      : |
+    %make
+install    : |
+    %make_install

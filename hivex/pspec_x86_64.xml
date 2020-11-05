@@ -1,0 +1,111 @@
+<PISI>
+    <Source>
+        <Name>hivex</Name>
+        <Packager>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Packager>
+        <License>LGPL v2.1</License>
+        <PartOf>programming.devel</PartOf>
+        <Summary xml:lang="en">library for reading and writing Windows Registry &quot;hive&quot; binary files.</Summary>
+        <Description xml:lang="en">This is a self-contained library for reading and writing Windows Registry &quot;hive&quot; binary files. Unlike many other tools in this area, it doesn&apos;t use the textual .REG format for output, because parsing that is as much trouble as parsing the original binary format.  Instead it makes the file available through a C API, or there is a separate program to export the hive as XML.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>hivex</Name>
+        <Summary xml:lang="en">library for reading and writing Windows Registry &quot;hive&quot; binary files.</Summary>
+        <Description xml:lang="en">This is a self-contained library for reading and writing Windows Registry &quot;hive&quot; binary files. Unlike many other tools in this area, it doesn&apos;t use the textual .REG format for output, because parsing that is as much trouble as parsing the original binary format.  Instead it makes the file available through a C API, or there is a separate program to export the hive as XML.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/hivexget</Path>
+            <Path fileType="executable">/usr/bin/hivexml</Path>
+            <Path fileType="executable">/usr/bin/hivexregedit</Path>
+            <Path fileType="executable">/usr/bin/hivexsh</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/hivex/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/hivex/hive_types.py</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/libhivexmod.so</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.7.0/hivex.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.7.0/x86_64-linux/_hivex.so</Path>
+            <Path fileType="library">/usr/lib64/libhivex.so.0</Path>
+            <Path fileType="library">/usr/lib64/libhivex.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/hivex.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/hivex.cmx</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/hivex.mli</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/libmlhivex.a</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/mlhivex.a</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/mlhivex.cma</Path>
+            <Path fileType="library">/usr/lib64/ocaml/hivex/mlhivex.cmxa</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/META</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/hivex.cmi</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/hivex.cmx</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/hivex.mli</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/libmlhivex.a</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/mlhivex.a</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/mlhivex.cma</Path>
+            <Path fileType="library">/usr/lib64/ocaml/site-lib/hivex/mlhivex.cmxa</Path>
+            <Path fileType="library">/usr/lib64/ocaml/stublibs/dllmlhivex.so</Path>
+            <Path fileType="library">/usr/lib64/ocaml/stublibs/dllmlhivex.so.owner</Path>
+            <Path fileType="library">/usr/lib64/perl5/5.32/x86_64-linux-thread-multi/perllocal.pod</Path>
+            <Path fileType="library">/usr/lib64/perl5/site_perl/5.32/x86_64-linux-thread-multi/Win/Hivex.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/site_perl/5.32/x86_64-linux-thread-multi/Win/Hivex/Regedit.pm</Path>
+            <Path fileType="library">/usr/lib64/perl5/site_perl/5.32/x86_64-linux-thread-multi/auto/Win/Hivex/.packlist</Path>
+            <Path fileType="library">/usr/lib64/perl5/site_perl/5.32/x86_64-linux-thread-multi/auto/Win/Hivex/Hivex.so</Path>
+            <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/gu/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kn/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ml/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/mr/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/or/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/hivex.mo</Path>
+            <Path fileType="man">/usr/share/man/man1/hivexget.1</Path>
+            <Path fileType="man">/usr/share/man/man1/hivexml.1</Path>
+            <Path fileType="man">/usr/share/man/man1/hivexregedit.1</Path>
+            <Path fileType="man">/usr/share/man/man1/hivexsh.1</Path>
+            <Path fileType="man">/usr/share/man/man3/Win::Hivex.3</Path>
+            <Path fileType="man">/usr/share/man/man3/Win::Hivex::Regedit.3</Path>
+            <Path fileType="man">/usr/share/man/man3/hivex.3</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>hivex-devel</Name>
+        <Summary xml:lang="en">Development files for hivex</Summary>
+        <Description xml:lang="en">This is a self-contained library for reading and writing Windows Registry &quot;hive&quot; binary files. Unlike many other tools in this area, it doesn&apos;t use the textual .REG format for output, because parsing that is as much trouble as parsing the original binary format.  Instead it makes the file available through a C API, or there is a separate program to export the hive as XML.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">hivex</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/hivex.h</Path>
+            <Path fileType="library">/usr/lib64/libhivex.a</Path>
+            <Path fileType="library">/usr/lib64/libhivex.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/hivex.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-11-05</Date>
+            <Version>1.3.18</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Update>
+    </History>
+</PISI>

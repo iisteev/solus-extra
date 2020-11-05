@@ -1,0 +1,20 @@
+name       : supermin
+version    : 5.2.0
+release    : 1
+source     :
+    - https://download.libguestfs.org/supermin/5.2-stable/supermin-5.2.0.tar.gz : fac7e128198b9b05afca99041fa9d5256cc80c1e3cd97eb3130a794b185cf107
+license    : GPL-2.0-or-later # CHECK ME
+component  : PLEASE FILL ME IN
+summary    : PLEASE FILL ME IN
+description: |
+    PLEASE FILL ME IN
+builddeps  :
+    - pkgconfig(ext2fs)
+    - ocaml-findlib
+    - ocamlbuild
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
