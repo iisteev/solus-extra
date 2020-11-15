@@ -1,0 +1,37 @@
+name       : frr
+version    : 7.5
+release    : 1
+source     :
+    - https://github.com/FRRouting/frr/releases/download/frr-7.5/frr-7.5.tar.gz : 0d53038da5f6b443fe99e9312e2a7b2d4b299c8251a7eeeaaa67a177fa6593e0
+license    : GPL-2.0-or-later
+homepage   : https://frrouting.org/
+component  : networking.util
+summary    : FRRouting (FRR) is an IP routing protocol suite for Linux and Unix.
+description: |
+    FRRouting (FRR) includes protocol daemons for BGP, IS-IS, LDP, OSPF, PIM, and RIP.
+    FRR’s seamless integration with the native Linux/Unix IP networking stacks makes it applicable to a wide variety of use cases including connecting hosts/VMs/containers to the network, advertising network services, LAN switching and routing, Internet access routers, and Internet peering.
+builddeps  :
+    - pkgconfig(libprotobuf-c)
+    - pkgconfig(libcares)
+    - pkgconfig(libyang)
+    - pkgconfig(sqlite3)
+    - pkgconfig(json-c)
+    - pkgconfig(libcap)
+    - pkgconfig(protobuf)
+    - pkgconfig(libzmq)
+    - pkgconfig(libunwind)
+setup      : |
+    %configure \
+      --disable-static \
+      --disable-werror \
+      --sysconfdir=/etc/frr \
+      --localstatedir=/var/run/frr \
+      --sbindir=/usr/lib/frr
+build      : |
+    %make
+install    : |
+    %make_install
+    install -D -d -m 0755 $installdir/etc/systemd/system
+    install -m 0644 tools/frr.service $installdir/etc/systemd/system/frr.service
+    install -m 0644 tools/etc/frr/daemons $installdir/etc/frr/daemons
+

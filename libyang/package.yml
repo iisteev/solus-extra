@@ -1,0 +1,19 @@
+name       : libyang 
+version    : 1.0.184
+release    : 1
+source     :
+    - https://github.com/CESNET/libyang/archive/v1.0.184.tar.gz : 1a5637451b73c4c5683837eb4c51371bb084795f653bc1a5fc20fed5541b58bc
+license    : BSD-3-Clause
+component  : networking.util
+summary    : YANG data modelling language parser
+description: |
+    libyang is a YANG data modelling language parser and toolkit written (and providing API) in C. The library is used e.g. in libnetconf2, Netopeer2, sysrepo and FRRouting projects.
+builddeps  : []
+rundeps    :
+    - libpcre
+setup      : |
+    %cmake_ninja -DENABLE_LYD_PRIV=ON
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

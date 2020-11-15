@@ -1,0 +1,65 @@
+<PISI>
+    <Source>
+        <Name>libyang</Name>
+        <Packager>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Packager>
+        <License>BSD-3-Clause</License>
+        <PartOf>networking.util</PartOf>
+        <Summary xml:lang="en">YANG data modelling language parser</Summary>
+        <Description xml:lang="en">libyang is a YANG data modelling language parser and toolkit written (and providing API) in C. The library is used e.g. in libnetconf2, Netopeer2, sysrepo and FRRouting projects.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libyang</Name>
+        <Summary xml:lang="en">YANG data modelling language parser</Summary>
+        <Description xml:lang="en">libyang is a YANG data modelling language parser and toolkit written (and providing API) in C. The library is used e.g. in libnetconf2, Netopeer2, sysrepo and FRRouting projects.
+</Description>
+        <PartOf>networking.util</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/yanglint</Path>
+            <Path fileType="executable">/usr/bin/yangre</Path>
+            <Path fileType="library">/usr/lib64/libyang.so.1</Path>
+            <Path fileType="library">/usr/lib64/libyang.so.1.9.2</Path>
+            <Path fileType="library">/usr/lib64/libyang1/extensions/metadata.so</Path>
+            <Path fileType="library">/usr/lib64/libyang1/extensions/nacm.so</Path>
+            <Path fileType="library">/usr/lib64/libyang1/extensions/yangdata.so</Path>
+            <Path fileType="library">/usr/lib64/libyang1/user_types/user_inet_types.so</Path>
+            <Path fileType="library">/usr/lib64/libyang1/user_types/user_yang_types.so</Path>
+            <Path fileType="man">/usr/share/man/man1/yanglint.1</Path>
+            <Path fileType="man">/usr/share/man/man1/yangre.1</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libyang-devel</Name>
+        <Summary xml:lang="en">Development files for libyang</Summary>
+        <Description xml:lang="en">libyang is a YANG data modelling language parser and toolkit written (and providing API) in C. The library is used e.g. in libnetconf2, Netopeer2, sysrepo and FRRouting projects.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">libyang</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/libyang/dict.h</Path>
+            <Path fileType="header">/usr/include/libyang/extensions.h</Path>
+            <Path fileType="header">/usr/include/libyang/libyang.h</Path>
+            <Path fileType="header">/usr/include/libyang/tree_data.h</Path>
+            <Path fileType="header">/usr/include/libyang/tree_schema.h</Path>
+            <Path fileType="header">/usr/include/libyang/user_types.h</Path>
+            <Path fileType="header">/usr/include/libyang/xml.h</Path>
+            <Path fileType="library">/usr/lib64/libyang.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/libyang.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-11-15</Date>
+            <Version>1.0.184</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Update>
+    </History>
+</PISI>

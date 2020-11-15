@@ -1,0 +1,260 @@
+<PISI>
+    <Source>
+        <Name>frr</Name>
+        <Homepage>https://frrouting.org/</Homepage>
+        <Packager>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>networking.util</PartOf>
+        <Summary xml:lang="en">FRRouting (FRR) is an IP routing protocol suite for Linux and Unix.</Summary>
+        <Description xml:lang="en">FRRouting (FRR) includes protocol daemons for BGP, IS-IS, LDP, OSPF, PIM, and RIP.
+FRR’s seamless integration with the native Linux/Unix IP networking stacks makes it applicable to a wide variety of use cases including connecting hosts/VMs/containers to the network, advertising network services, LAN switching and routing, Internet access routers, and Internet peering.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>frr</Name>
+        <Summary xml:lang="en">FRRouting (FRR) is an IP routing protocol suite for Linux and Unix.</Summary>
+        <Description xml:lang="en">FRRouting (FRR) includes protocol daemons for BGP, IS-IS, LDP, OSPF, PIM, and RIP.
+FRR’s seamless integration with the native Linux/Unix IP networking stacks makes it applicable to a wide variety of use cases including connecting hosts/VMs/containers to the network, advertising network services, LAN switching and routing, Internet access routers, and Internet peering.
+</Description>
+        <PartOf>networking.util</PartOf>
+        <Files>
+            <Path fileType="config">/etc/frr/babeld.conf.sample</Path>
+            <Path fileType="config">/etc/frr/bfdd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/bgpd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/bgpd.conf.sample2</Path>
+            <Path fileType="config">/etc/frr/bgpd.conf.vnc.sample</Path>
+            <Path fileType="config">/etc/frr/daemons</Path>
+            <Path fileType="config">/etc/frr/eigrpd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/fabricd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/isisd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/ldpd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/ospf6d.conf.sample</Path>
+            <Path fileType="config">/etc/frr/ospfd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/pbrd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/pimd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/ripd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/ripngd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/staticd.conf.sample</Path>
+            <Path fileType="config">/etc/frr/vtysh.conf.sample</Path>
+            <Path fileType="config">/etc/frr/zebra.conf.sample</Path>
+            <Path fileType="config">/etc/systemd/system/frr.service</Path>
+            <Path fileType="executable">/usr/bin/mtracebis</Path>
+            <Path fileType="executable">/usr/bin/vtysh</Path>
+            <Path fileType="library">/usr/lib/frr/babeld</Path>
+            <Path fileType="library">/usr/lib/frr/bfdd</Path>
+            <Path fileType="library">/usr/lib/frr/bgpd</Path>
+            <Path fileType="library">/usr/lib/frr/eigrpd</Path>
+            <Path fileType="library">/usr/lib/frr/fabricd</Path>
+            <Path fileType="library">/usr/lib/frr/frr</Path>
+            <Path fileType="library">/usr/lib/frr/frr-reload</Path>
+            <Path fileType="library">/usr/lib/frr/frr-reload.py</Path>
+            <Path fileType="library">/usr/lib/frr/frrcommon.sh</Path>
+            <Path fileType="library">/usr/lib/frr/frrinit.sh</Path>
+            <Path fileType="library">/usr/lib/frr/generate_support_bundle.py</Path>
+            <Path fileType="library">/usr/lib/frr/isisd</Path>
+            <Path fileType="library">/usr/lib/frr/ldpd</Path>
+            <Path fileType="library">/usr/lib/frr/nhrpd</Path>
+            <Path fileType="library">/usr/lib/frr/ospf6d</Path>
+            <Path fileType="library">/usr/lib/frr/ospfd</Path>
+            <Path fileType="library">/usr/lib/frr/pbrd</Path>
+            <Path fileType="library">/usr/lib/frr/pimd</Path>
+            <Path fileType="library">/usr/lib/frr/ripd</Path>
+            <Path fileType="library">/usr/lib/frr/ripngd</Path>
+            <Path fileType="library">/usr/lib/frr/ssd</Path>
+            <Path fileType="library">/usr/lib/frr/staticd</Path>
+            <Path fileType="library">/usr/lib/frr/vrrpd</Path>
+            <Path fileType="library">/usr/lib/frr/watchfrr</Path>
+            <Path fileType="library">/usr/lib/frr/watchfrr.sh</Path>
+            <Path fileType="library">/usr/lib/frr/zebra</Path>
+            <Path fileType="library">/usr/lib64/frr/modules/bgpd_bmp.so</Path>
+            <Path fileType="library">/usr/lib64/frr/modules/dplane_fpm_nl.so</Path>
+            <Path fileType="library">/usr/lib64/frr/modules/zebra_cumulus_mlag.so</Path>
+            <Path fileType="library">/usr/lib64/frr/modules/zebra_irdp.so</Path>
+            <Path fileType="library">/usr/lib64/libfrr.so.0</Path>
+            <Path fileType="library">/usr/lib64/libfrr.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libfrrcares.so.0</Path>
+            <Path fileType="library">/usr/lib64/libfrrcares.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libfrrospfapiclient.so.0</Path>
+            <Path fileType="library">/usr/lib64/libfrrospfapiclient.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libfrrzmq.so.0</Path>
+            <Path fileType="library">/usr/lib64/libfrrzmq.so.0.0.0</Path>
+            <Path fileType="data">/usr/share/yang/frr-bfdd.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-eigrpd.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-filter.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-igmp.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-interface.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-isisd.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-module-translator.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-nexthop.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-pim-rp.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-pim.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-ripd.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-ripngd.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-route-map.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-route-types.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-routing.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-staticd.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-test-module.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-vrf.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-vrrpd.yang</Path>
+            <Path fileType="data">/usr/share/yang/frr-zebra.yang</Path>
+            <Path fileType="data">/usr/share/yang/ietf-interfaces.yang</Path>
+            <Path fileType="data">/usr/share/yang/ietf-routing-types.yang</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>frr-devel</Name>
+        <Summary xml:lang="en">Development files for frr</Summary>
+        <Description xml:lang="en">FRRouting (FRR) includes protocol daemons for BGP, IS-IS, LDP, OSPF, PIM, and RIP.
+FRR’s seamless integration with the native Linux/Unix IP networking stacks makes it applicable to a wide variety of use cases including connecting hosts/VMs/containers to the network, advertising network services, LAN switching and routing, Internet access routers, and Internet peering.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">frr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/frr/agg_table.h</Path>
+            <Path fileType="header">/usr/include/frr/atomlist.h</Path>
+            <Path fileType="header">/usr/include/frr/bfd.h</Path>
+            <Path fileType="header">/usr/include/frr/bitfield.h</Path>
+            <Path fileType="header">/usr/include/frr/buffer.h</Path>
+            <Path fileType="header">/usr/include/frr/checksum.h</Path>
+            <Path fileType="header">/usr/include/frr/command.h</Path>
+            <Path fileType="header">/usr/include/frr/command_graph.h</Path>
+            <Path fileType="header">/usr/include/frr/command_match.h</Path>
+            <Path fileType="header">/usr/include/frr/compiler.h</Path>
+            <Path fileType="header">/usr/include/frr/csv.h</Path>
+            <Path fileType="header">/usr/include/frr/db.h</Path>
+            <Path fileType="header">/usr/include/frr/debug.h</Path>
+            <Path fileType="header">/usr/include/frr/defaults.h</Path>
+            <Path fileType="header">/usr/include/frr/distribute.h</Path>
+            <Path fileType="header">/usr/include/frr/eigrpd/eigrp_dump.h</Path>
+            <Path fileType="header">/usr/include/frr/eigrpd/eigrp_topology.h</Path>
+            <Path fileType="header">/usr/include/frr/eigrpd/eigrpd.h</Path>
+            <Path fileType="header">/usr/include/frr/ferr.h</Path>
+            <Path fileType="header">/usr/include/frr/filter.h</Path>
+            <Path fileType="header">/usr/include/frr/freebsd-queue.h</Path>
+            <Path fileType="header">/usr/include/frr/frr_pthread.h</Path>
+            <Path fileType="header">/usr/include/frr/frr_zmq.h</Path>
+            <Path fileType="header">/usr/include/frr/frratomic.h</Path>
+            <Path fileType="header">/usr/include/frr/frrcu.h</Path>
+            <Path fileType="header">/usr/include/frr/frrlua.h</Path>
+            <Path fileType="header">/usr/include/frr/frrstr.h</Path>
+            <Path fileType="header">/usr/include/frr/getopt.h</Path>
+            <Path fileType="header">/usr/include/frr/graph.h</Path>
+            <Path fileType="header">/usr/include/frr/hash.h</Path>
+            <Path fileType="header">/usr/include/frr/hook.h</Path>
+            <Path fileType="header">/usr/include/frr/iana_afi.h</Path>
+            <Path fileType="header">/usr/include/frr/id_alloc.h</Path>
+            <Path fileType="header">/usr/include/frr/if.h</Path>
+            <Path fileType="header">/usr/include/frr/if_rmap.h</Path>
+            <Path fileType="header">/usr/include/frr/imsg.h</Path>
+            <Path fileType="header">/usr/include/frr/ipaddr.h</Path>
+            <Path fileType="header">/usr/include/frr/jhash.h</Path>
+            <Path fileType="header">/usr/include/frr/json.h</Path>
+            <Path fileType="header">/usr/include/frr/keychain.h</Path>
+            <Path fileType="header">/usr/include/frr/lib_errors.h</Path>
+            <Path fileType="header">/usr/include/frr/lib_vty.h</Path>
+            <Path fileType="header">/usr/include/frr/libfrr.h</Path>
+            <Path fileType="header">/usr/include/frr/libospf.h</Path>
+            <Path fileType="header">/usr/include/frr/linklist.h</Path>
+            <Path fileType="header">/usr/include/frr/log.h</Path>
+            <Path fileType="header">/usr/include/frr/log_vty.h</Path>
+            <Path fileType="header">/usr/include/frr/md5.h</Path>
+            <Path fileType="header">/usr/include/frr/memory.h</Path>
+            <Path fileType="header">/usr/include/frr/mlag.h</Path>
+            <Path fileType="header">/usr/include/frr/module.h</Path>
+            <Path fileType="header">/usr/include/frr/monotime.h</Path>
+            <Path fileType="header">/usr/include/frr/mpls.h</Path>
+            <Path fileType="header">/usr/include/frr/network.h</Path>
+            <Path fileType="header">/usr/include/frr/nexthop.h</Path>
+            <Path fileType="header">/usr/include/frr/nexthop_group.h</Path>
+            <Path fileType="header">/usr/include/frr/nexthop_group_private.h</Path>
+            <Path fileType="header">/usr/include/frr/northbound.h</Path>
+            <Path fileType="header">/usr/include/frr/northbound_cli.h</Path>
+            <Path fileType="header">/usr/include/frr/northbound_db.h</Path>
+            <Path fileType="header">/usr/include/frr/ns.h</Path>
+            <Path fileType="header">/usr/include/frr/openbsd-queue.h</Path>
+            <Path fileType="header">/usr/include/frr/openbsd-tree.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfapi/ospf_apiclient.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_api.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_asbr.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_dump.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_dump_api.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_ism.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_lsa.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_lsdb.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_nsm.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospf_opaque.h</Path>
+            <Path fileType="header">/usr/include/frr/ospfd/ospfd.h</Path>
+            <Path fileType="header">/usr/include/frr/pbr.h</Path>
+            <Path fileType="header">/usr/include/frr/plist.h</Path>
+            <Path fileType="header">/usr/include/frr/prefix.h</Path>
+            <Path fileType="header">/usr/include/frr/printfrr.h</Path>
+            <Path fileType="header">/usr/include/frr/privs.h</Path>
+            <Path fileType="header">/usr/include/frr/ptm_lib.h</Path>
+            <Path fileType="header">/usr/include/frr/pullwr.h</Path>
+            <Path fileType="header">/usr/include/frr/pw.h</Path>
+            <Path fileType="header">/usr/include/frr/qobj.h</Path>
+            <Path fileType="header">/usr/include/frr/queue.h</Path>
+            <Path fileType="header">/usr/include/frr/resolver.h</Path>
+            <Path fileType="header">/usr/include/frr/ringbuf.h</Path>
+            <Path fileType="header">/usr/include/frr/route_types.h</Path>
+            <Path fileType="header">/usr/include/frr/routemap.h</Path>
+            <Path fileType="header">/usr/include/frr/routing_nb.h</Path>
+            <Path fileType="header">/usr/include/frr/sbuf.h</Path>
+            <Path fileType="header">/usr/include/frr/seqlock.h</Path>
+            <Path fileType="header">/usr/include/frr/sha256.h</Path>
+            <Path fileType="header">/usr/include/frr/sigevent.h</Path>
+            <Path fileType="header">/usr/include/frr/skiplist.h</Path>
+            <Path fileType="header">/usr/include/frr/smux.h</Path>
+            <Path fileType="header">/usr/include/frr/sockopt.h</Path>
+            <Path fileType="header">/usr/include/frr/sockunion.h</Path>
+            <Path fileType="header">/usr/include/frr/spf_backoff.h</Path>
+            <Path fileType="header">/usr/include/frr/srcdest_table.h</Path>
+            <Path fileType="header">/usr/include/frr/srte.h</Path>
+            <Path fileType="header">/usr/include/frr/srv6.h</Path>
+            <Path fileType="header">/usr/include/frr/stream.h</Path>
+            <Path fileType="header">/usr/include/frr/systemd.h</Path>
+            <Path fileType="header">/usr/include/frr/table.h</Path>
+            <Path fileType="header">/usr/include/frr/termtable.h</Path>
+            <Path fileType="header">/usr/include/frr/thread.h</Path>
+            <Path fileType="header">/usr/include/frr/typerb.h</Path>
+            <Path fileType="header">/usr/include/frr/typesafe.h</Path>
+            <Path fileType="header">/usr/include/frr/vector.h</Path>
+            <Path fileType="header">/usr/include/frr/version.h</Path>
+            <Path fileType="header">/usr/include/frr/vlan.h</Path>
+            <Path fileType="header">/usr/include/frr/vrf.h</Path>
+            <Path fileType="header">/usr/include/frr/vrf_int.h</Path>
+            <Path fileType="header">/usr/include/frr/vty.h</Path>
+            <Path fileType="header">/usr/include/frr/vxlan.h</Path>
+            <Path fileType="header">/usr/include/frr/wheel.h</Path>
+            <Path fileType="header">/usr/include/frr/workqueue.h</Path>
+            <Path fileType="header">/usr/include/frr/yang.h</Path>
+            <Path fileType="header">/usr/include/frr/yang_translator.h</Path>
+            <Path fileType="header">/usr/include/frr/yang_wrappers.h</Path>
+            <Path fileType="header">/usr/include/frr/zassert.h</Path>
+            <Path fileType="header">/usr/include/frr/zclient.h</Path>
+            <Path fileType="header">/usr/include/frr/zebra.h</Path>
+            <Path fileType="header">/usr/include/frr/zlog.h</Path>
+            <Path fileType="header">/usr/include/frr/zlog_targets.h</Path>
+            <Path fileType="library">/usr/lib64/libfrr.so</Path>
+            <Path fileType="library">/usr/lib64/libfrrcares.so</Path>
+            <Path fileType="library">/usr/lib64/libfrrospfapiclient.so</Path>
+            <Path fileType="library">/usr/lib64/libfrrzmq.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-11-15</Date>
+            <Version>7.5</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Isteevan Shetoo</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Update>
+    </History>
+</PISI>
