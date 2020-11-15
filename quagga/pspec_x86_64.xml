@@ -1,0 +1,158 @@
+<PISI>
+    <Source>
+        <Name>quagga</Name>
+        <Homepage>https://www.nongnu.org/quagga/</Homepage>
+        <Packager>
+            <Name>iisteev</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>network.util</PartOf>
+        <Summary xml:lang="en">Quagga Routing Software Suite</Summary>
+        <Description xml:lang="en">Quagga is a routing software suite, providing implementations of OSPFv2, OSPFv3, RIP v1 and v2, RIPng and BGP-4 for Unix platforms, particularly FreeBSD, Linux, Solaris and NetBSD. Quagga is a fork of GNU Zebra which was developed by Kunihiro Ishiguro. 
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>quagga</Name>
+        <Summary xml:lang="en">Quagga Routing Software Suite</Summary>
+        <Description xml:lang="en">Quagga is a routing software suite, providing implementations of OSPFv2, OSPFv3, RIP v1 and v2, RIPng and BGP-4 for Unix platforms, particularly FreeBSD, Linux, Solaris and NetBSD. Quagga is a fork of GNU Zebra which was developed by Kunihiro Ishiguro. 
+</Description>
+        <PartOf>network.util</PartOf>
+        <Files>
+            <Path fileType="config">/etc/bgpd.conf.sample</Path>
+            <Path fileType="config">/etc/bgpd.conf.sample2</Path>
+            <Path fileType="config">/etc/isisd.conf.sample</Path>
+            <Path fileType="config">/etc/ospf6d.conf.sample</Path>
+            <Path fileType="config">/etc/ospfd.conf.sample</Path>
+            <Path fileType="config">/etc/pimd.conf.sample</Path>
+            <Path fileType="config">/etc/ripd.conf.sample</Path>
+            <Path fileType="config">/etc/ripngd.conf.sample</Path>
+            <Path fileType="config">/etc/vtysh.conf.sample</Path>
+            <Path fileType="config">/etc/zebra.conf.sample</Path>
+            <Path fileType="executable">/usr/bin/bgp_btoa</Path>
+            <Path fileType="executable">/usr/bin/test_igmpv3_join</Path>
+            <Path fileType="executable">/usr/bin/vtysh</Path>
+            <Path fileType="library">/usr/lib64/libfpm_pb.so.0</Path>
+            <Path fileType="library">/usr/lib64/libfpm_pb.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libospf.so.0</Path>
+            <Path fileType="library">/usr/lib64/libospf.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libospfapiclient.so.0</Path>
+            <Path fileType="library">/usr/lib64/libospfapiclient.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libquagga_pb.so.0</Path>
+            <Path fileType="library">/usr/lib64/libquagga_pb.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libzebra.so.1</Path>
+            <Path fileType="library">/usr/lib64/libzebra.so.1.0.0</Path>
+            <Path fileType="executable">/usr/sbin/bgpd</Path>
+            <Path fileType="executable">/usr/sbin/isisd</Path>
+            <Path fileType="executable">/usr/sbin/nhrpd</Path>
+            <Path fileType="executable">/usr/sbin/ospf6d</Path>
+            <Path fileType="executable">/usr/sbin/ospfclient</Path>
+            <Path fileType="executable">/usr/sbin/ospfd</Path>
+            <Path fileType="executable">/usr/sbin/pimd</Path>
+            <Path fileType="executable">/usr/sbin/ripd</Path>
+            <Path fileType="executable">/usr/sbin/ripngd</Path>
+            <Path fileType="executable">/usr/sbin/watchquagga</Path>
+            <Path fileType="executable">/usr/sbin/zebra</Path>
+            <Path fileType="info">/usr/share/info/quagga.info</Path>
+            <Path fileType="info">/usr/share/info/quagga.info-1</Path>
+            <Path fileType="info">/usr/share/info/quagga.info-2</Path>
+            <Path fileType="man">/usr/share/man/man1/vtysh.1</Path>
+            <Path fileType="man">/usr/share/man/man8/bgpd.8</Path>
+            <Path fileType="man">/usr/share/man/man8/isisd.8</Path>
+            <Path fileType="man">/usr/share/man/man8/nhrpd.8</Path>
+            <Path fileType="man">/usr/share/man/man8/ospf6d.8</Path>
+            <Path fileType="man">/usr/share/man/man8/ospfclient.8</Path>
+            <Path fileType="man">/usr/share/man/man8/ospfd.8</Path>
+            <Path fileType="man">/usr/share/man/man8/pimd.8</Path>
+            <Path fileType="man">/usr/share/man/man8/ripd.8</Path>
+            <Path fileType="man">/usr/share/man/man8/ripngd.8</Path>
+            <Path fileType="man">/usr/share/man/man8/watchquagga.8</Path>
+            <Path fileType="man">/usr/share/man/man8/zebra.8</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>quagga-devel</Name>
+        <Summary xml:lang="en">Development files for quagga</Summary>
+        <Description xml:lang="en">Quagga is a routing software suite, providing implementations of OSPFv2, OSPFv3, RIP v1 and v2, RIPng and BGP-4 for Unix platforms, particularly FreeBSD, Linux, Solaris and NetBSD. Quagga is a fork of GNU Zebra which was developed by Kunihiro Ishiguro. 
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">quagga</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/quagga/buffer.h</Path>
+            <Path fileType="header">/usr/include/quagga/checksum.h</Path>
+            <Path fileType="header">/usr/include/quagga/command.h</Path>
+            <Path fileType="header">/usr/include/quagga/distribute.h</Path>
+            <Path fileType="header">/usr/include/quagga/event_counter.h</Path>
+            <Path fileType="header">/usr/include/quagga/fifo.h</Path>
+            <Path fileType="header">/usr/include/quagga/filter.h</Path>
+            <Path fileType="header">/usr/include/quagga/getopt.h</Path>
+            <Path fileType="header">/usr/include/quagga/hash.h</Path>
+            <Path fileType="header">/usr/include/quagga/if.h</Path>
+            <Path fileType="header">/usr/include/quagga/if_rmap.h</Path>
+            <Path fileType="header">/usr/include/quagga/jhash.h</Path>
+            <Path fileType="header">/usr/include/quagga/keychain.h</Path>
+            <Path fileType="header">/usr/include/quagga/libospf.h</Path>
+            <Path fileType="header">/usr/include/quagga/linklist.h</Path>
+            <Path fileType="header">/usr/include/quagga/log.h</Path>
+            <Path fileType="header">/usr/include/quagga/md5.h</Path>
+            <Path fileType="header">/usr/include/quagga/memory.h</Path>
+            <Path fileType="header">/usr/include/quagga/memtypes.h</Path>
+            <Path fileType="header">/usr/include/quagga/network.h</Path>
+            <Path fileType="header">/usr/include/quagga/nexthop.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfapi/ospf_apiclient.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_api.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_asbr.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_dump.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_ism.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_lsa.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_lsdb.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_nsm.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospf_opaque.h</Path>
+            <Path fileType="header">/usr/include/quagga/ospfd/ospfd.h</Path>
+            <Path fileType="header">/usr/include/quagga/plist.h</Path>
+            <Path fileType="header">/usr/include/quagga/pqueue.h</Path>
+            <Path fileType="header">/usr/include/quagga/prefix.h</Path>
+            <Path fileType="header">/usr/include/quagga/privs.h</Path>
+            <Path fileType="header">/usr/include/quagga/route_types.h</Path>
+            <Path fileType="header">/usr/include/quagga/routemap.h</Path>
+            <Path fileType="header">/usr/include/quagga/sigevent.h</Path>
+            <Path fileType="header">/usr/include/quagga/smux.h</Path>
+            <Path fileType="header">/usr/include/quagga/sockopt.h</Path>
+            <Path fileType="header">/usr/include/quagga/sockunion.h</Path>
+            <Path fileType="header">/usr/include/quagga/str.h</Path>
+            <Path fileType="header">/usr/include/quagga/stream.h</Path>
+            <Path fileType="header">/usr/include/quagga/table.h</Path>
+            <Path fileType="header">/usr/include/quagga/thread.h</Path>
+            <Path fileType="header">/usr/include/quagga/vector.h</Path>
+            <Path fileType="header">/usr/include/quagga/version.h</Path>
+            <Path fileType="header">/usr/include/quagga/vrf.h</Path>
+            <Path fileType="header">/usr/include/quagga/vty.h</Path>
+            <Path fileType="header">/usr/include/quagga/workqueue.h</Path>
+            <Path fileType="header">/usr/include/quagga/zassert.h</Path>
+            <Path fileType="header">/usr/include/quagga/zclient.h</Path>
+            <Path fileType="header">/usr/include/quagga/zebra.h</Path>
+            <Path fileType="library">/usr/lib64/libfpm_pb.a</Path>
+            <Path fileType="library">/usr/lib64/libfpm_pb.so</Path>
+            <Path fileType="library">/usr/lib64/libospf.a</Path>
+            <Path fileType="library">/usr/lib64/libospf.so</Path>
+            <Path fileType="library">/usr/lib64/libospfapiclient.a</Path>
+            <Path fileType="library">/usr/lib64/libospfapiclient.so</Path>
+            <Path fileType="library">/usr/lib64/libquagga_pb.a</Path>
+            <Path fileType="library">/usr/lib64/libquagga_pb.so</Path>
+            <Path fileType="library">/usr/lib64/libzebra.a</Path>
+            <Path fileType="library">/usr/lib64/libzebra.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-11-15</Date>
+            <Version>1.2.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>iisteev</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Update>
+    </History>
+</PISI>

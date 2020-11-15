@@ -1,0 +1,19 @@
+name       : quagga
+version    : 1.2.4
+release    : 1
+source     :
+    - https://download.savannah.gnu.org/releases/quagga/quagga-1.2.4.tar.gz : e364c082c3309910e1eb7b068bf39ee298e2f2f3f31a6431a5c115193bd653d3
+license    : GPL-2.0-or-later # To be checked
+homepage   : https://www.nongnu.org/quagga/
+component  : network.util
+summary    : Quagga Routing Software Suite
+description: |
+    Quagga is a routing software suite, providing implementations of OSPFv2, OSPFv3, RIP v1 and v2, RIPng and BGP-4 for Unix platforms, particularly FreeBSD, Linux, Solaris and NetBSD. Quagga is a fork of GNU Zebra which was developed by Kunihiro Ishiguro. 
+builddeps  :
+    - pkgconfig(libcares)
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
