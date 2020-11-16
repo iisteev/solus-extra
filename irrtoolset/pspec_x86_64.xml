@@ -1,0 +1,44 @@
+<PISI>
+    <Source>
+        <Name>irrtoolset</Name>
+        <Packager>
+            <Name>iisteev</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Packager>
+        <License>GPL-2.0-or-later, USC, RIPE NCC</License>
+        <PartOf>networking.util</PartOf>
+        <Summary xml:lang="en">The IRRToolSet is a set of tools to work with Internet routing policies.</Summary>
+        <Description xml:lang="en">The goal of the IRRToolSet is to make routing information more convenient and useful for network engineers, by providing tools for automated router configuration, routing policy analysis, and on-going maintenance.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>irrtoolset</Name>
+        <Summary xml:lang="en">The IRRToolSet is a set of tools to work with Internet routing policies.</Summary>
+        <Description xml:lang="en">The goal of the IRRToolSet is to make routing information more convenient and useful for network engineers, by providing tools for automated router configuration, routing policy analysis, and on-going maintenance.
+</Description>
+        <PartOf>networking.util</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/peval</Path>
+            <Path fileType="executable">/usr/bin/rpslcheck</Path>
+            <Path fileType="executable">/usr/bin/rtconfig</Path>
+            <Path fileType="doc">/usr/share/doc/irrtoolset/AUTHORS</Path>
+            <Path fileType="doc">/usr/share/doc/irrtoolset/COPYING</Path>
+            <Path fileType="doc">/usr/share/doc/irrtoolset/NEWS</Path>
+            <Path fileType="doc">/usr/share/doc/irrtoolset/README.md</Path>
+            <Path fileType="man">/usr/share/man/man1/irrtoolset-errors.1</Path>
+            <Path fileType="man">/usr/share/man/man1/peval.1</Path>
+            <Path fileType="man">/usr/share/man/man1/rpslcheck.1</Path>
+            <Path fileType="man">/usr/share/man/man1/rtconfig.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-11-16</Date>
+            <Version>5.1.3</Version>
+            <Comment>Packaging update</Comment>
+            <Name>iisteev</Name>
+            <Email>isteevan.shetoo@is-info.fr</Email>
+        </Update>
+    </History>
+</PISI>
