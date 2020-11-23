@@ -1,0 +1,26 @@
+name       : tela-icon-theme
+version    : 20201011
+release    : 1
+source     :
+    - https://github.com/vinceliuice/Tela-icon-theme/archive/2020-10-11.tar.gz : 9706adc119d938a1bedc2a146e5a5a1df07fd29cc1f9b0cfe2cd47a00a74a3f4
+license    : GPL-3.0-only
+component  : desktop.theme
+summary    : A flat colorful Design icon theme
+description: |
+    A flat colorful Design icon theme
+builddeps  : []
+patterns:
+  - black : /usr/share/icons/*-black*
+  - blue : /usr/share/icons/*-blue*
+  - green : /usr/share/icons/*-green*
+  - grey : /usr/share/icons/*-grey*
+  - red : /usr/share/icons/*-red*
+  - ubuntu : /usr/share/icons/*-ubuntu*
+  - manjaro : /usr/share/icons/*-manjaro*
+  - yellow : /usr/share/icons/*-yellow*
+  - pink : /usr/share/icons/*-pink*
+  - purple : /usr/share/icons/*-purple*
+  - orange : /usr/share/icons/*-orange*
+install    : |
+    sed -i '/gtk-update-icon-cache/d' install.sh
+    bash install.sh -a -d $installdir/usr/share/icons 
