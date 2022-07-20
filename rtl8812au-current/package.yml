@@ -1,0 +1,23 @@
+name       : rtl8812au-current
+version    : 5.6.4.2
+release    : 1
+source     :
+    - git|https://github.com/aircrack-ng/rtl8812au.git : v5.6.4.2
+license    : GPL-2.0
+component  : kernel
+summary    : RTL8812AU/21AU and RTL8814AU Wireless drivers 
+description: |
+    RTL8812AU/21AU and RTL8814AU driver with monitor mode and frame injection  
+builddeps  :
+  - bc
+  - pkgconfig(libelf)
+  - linux-current
+  - linux-current-headers
+setup      : |
+    make clean
+build      : |
+    %make
+install    : |
+    INSTALL_DIR=$installdir/lib/modules/$(uname -r)/kernel/drivers/net/wireless
+    mkdir -p $INSTALL_DIR
+    make install MODDESTDIR=$INSTALL_DIR
