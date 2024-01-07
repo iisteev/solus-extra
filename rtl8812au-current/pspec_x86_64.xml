@@ -10,7 +10,7 @@
         <Summary xml:lang="en">RTL8812AU/21AU and RTL8814AU Wireless drivers</Summary>
         <Description xml:lang="en">RTL8812AU/21AU and RTL8814AU driver with monitor mode and frame injection  
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>rtl8812au-current</Name>
@@ -19,12 +19,12 @@
 </Description>
         <PartOf>kernel</PartOf>
         <Files>
-            <Path fileType="data">/lib/modules/5.15.50-216.current/kernel/drivers/net/wireless/88XXau.ko</Path>
+            <Path fileType="data">/lib/modules/6.6.8-268.current/kernel/drivers/net/wireless/88XXau.ko</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2022-07-20</Date>
+        <Update release="7">
+            <Date>2024-01-07</Date>
             <Version>5.6.4.2</Version>
             <Comment>Packaging update</Comment>
             <Name>iisteev</Name>
